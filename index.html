@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>My paint</title>
+</head>
+<body>
+    <section>
+        <div class="flexBox">
+            <div id="drawningTools">
+                <div id="colors">
+                    <div class="une">
+                        <label><u>Couleur:  </u></label>
+                        <input type="color" id="color">
+                    </div>
+                    <div class="deux">
+                        <label class="img"><u>Images:  </u></label>
+                        <input type="file" id="files">
+                    </div>
+                    <div class="for">
+                        <label class="myLab"><u>Taille:  </u></label>
+                        <select id="taille">
+                            <option>5</option>
+                            <option>8</option>
+                            <option>10</option>
+                            <option>12</option>
+                            <option>15</option>
+                            <option>18</option>
+                            <option>22</option>
+                            <option>28</option>
+                            <option>40</option>
+                        </select>
+                    </div>
+                    <div class="trois">
+                        <label><u>Outils:  </u></label>
+                        <img src="images/eraser.png" onclick="gomme()" alt="Alors oui c'est une gomme" class="myImg">
+                        <img src="images/pencil.png" onclick="pencil()" alt="ça c'est un crayon" class="myImg">
+                        <img src="images/oval.png" onclick="rond()" alt="ç c'est un rond" class="myImg">
+                        <img src="images/multi-tab.png" onclick="multi_tab()" alt="ça c'est un carré" class="myImg">
+                        <img src="images/circular-shape-silhouette.png" onclick="full_circle()" alt="ça c'est un rond plein" class="myImg">
+                        <img src="images/rounded-black-square-shape.png" onclick="full_carre()" alt="ça c'est un carré plein" class="myImg">
+                        <img src="images/substract.png" onclick="traits()" alt="et ça c'est un trait" class="myImg">
+                    </div>
+                     <div id="othertools">
+                         <button type="button" id="save" class="btn btn-primary" onclick="saveImage()">Sauvegarder l'image</button>
+                         <br>
+                         <button type="button" id="clearCanvas" class="btn btn-primary">Effacer</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div id="sketch">
+            <canvas id="canvas" width="1300px" height="850px"></canvas>
+        </div>
+    </section>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
